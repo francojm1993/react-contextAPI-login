@@ -57,7 +57,7 @@ const UserProvider = (props) => {
         if (res.status !== 200) {
           cookieManager.remove("refreshToken");
         } else {
-          logIn(res.uid, res.token);
+          logIn(res.data.uid, res.data.token);
         }
       }
     );
